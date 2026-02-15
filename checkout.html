@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | Tech Tech ni Jovan</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main style="display: flex; gap: 20px;">
+        
+        <section style="flex: 2;">
+            <h1>Checkout</h1>
+            
+            <form action="account.html"> <section>
+                    <fieldset>
+                        <legend><strong>Shipping Address</strong></legend>
+                        <p>
+                            <label for="fullname">Full Name:</label><br>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </p>
+                        <p>
+                            <label for="street">Street Address:</label><br>
+                            <input type="text" id="street" name="street" required>
+                        </p>
+                        <p>
+                            <label for="zip">Zip Code:</label><br>
+                            <input type="text" id="zip" name="zip" required>
+                        </p>
+                    </fieldset>
+                </section>
+
+                <br>
+
+                <section>
+                    <h3>Payment Method</h3>
+                    <input type="radio" id="card" name="payment_method" value="card" checked>
+                    <label for="card">Credit Card</label><br>
+                    
+                    <input type="radio" id="paypal" name="payment_method" value="paypal">
+                    <label for="paypal">PayPal</label>
+                </section>
+
+                <br>
+                <button type="submit" style="padding: 10px 20px;">Place Order</button>
+            </form>
+        </section>
+
+        <aside style="flex: 1; border: 1px solid black; padding: 15px; height: fit-content;">
+            <h3>Order Summary</h3>
+            <p><strong>Sony WH-1000XM6</strong><br>₱24,990.00</p>
+            <p><strong>Sennheiser Momentum 4</strong><br>₱21,000.00</p>
+            <hr>
+            <p>Subtotal: ₱45,990.00</p>
+            <p>Shipping: ₱150.00</p>
+            <h3>Total: ₱46,140.00</h3>
+        </aside>
+
+    </main>
+
+    <br><hr>
+
+    <footer>
+        <p>© 2026 Jovan's Tech. All rights reserved</p>
+    </footer>
+</body>
+</html>
