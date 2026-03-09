@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flagship Audio | Modern Shop PH</title>
-      <link rel="stylesheet" href="style.css">
+    <title>Shop | Tech Tech ni Jovan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bluetooth.css">
 </head>
 <body>
     <header>
+        <h1>Tech Tech ni Jovan</h1>
         <nav>
             <ul>
                 <li><a href="landing.html">Home</a></li>
@@ -17,66 +19,46 @@
         </nav>
     </header>
 
-    <hr>
+    <main style="text-align: center; padding: 20px;">
+        <h2>2026 Headphone Collection</h2>
+        
+        <div class="product-grid">
+            <article>
+                <img src="1.jpeg" alt="Sony WH-1000XM6">
+                <h3>Sony WH-1000XM6</h3>
+                <p>Industry-leading noise cancellation.</p>
+                <p class="price">24,990.00</p>
+                <button type="button" onclick="location.href='product-view1.html'">View Details</button>
+            </article>
 
-    <aside>
-        <h3>Filters</h3>
-        <form>
-            <p><strong>Brand Type</strong></p>
-            <input type="checkbox" id="sony"> <label for="sony">Sony</label><br>
-            <input type="checkbox" id="bose"> <label for="bose">Bose</label><br>
-            <input type="checkbox" id="apple"> <label for="apple">Apple</label>
+            <article>
+                <img src="2.jpeg" alt="Bose QC Ultra">
+                <h3>Bose QC Ultra</h3>
+                <p>The ultimate in long-wear comfort.</p>
+                <p class="price">26,500.00</p>
+                <button type="button" onclick="location.href='product-view2.html'">View Details</button>
+            </article>
 
-            <p><strong>Price Range</strong></p>
-            <input type="radio" name="p" id="r1"> <label for="r1">Under ₱25,000</label><br>
-            <input type="radio" name="p" id="r2"> <label for="r2">Over ₱25,000</label>
-        </form>
-    </aside>
+            <article>
+                <img src="3.jpeg" alt="Sennheiser Momentum 4">
+                <h3>Sennheiser Momentum 4</h3>
+                <p>60-hour battery life powerhouse.</p>
+                <p class="price">21,000.00</p>
+                <button type="button" onclick="location.href='product-view3.html'">View Details</button>
+            </article>
 
-    <hr>
-
-    <main>
-        <h1>2026 Flagship Collection</h1>
-
-        <article>
-            <img src="1.jpeg" alt="Sony WH-1000XM6" width="200px">
-            <h3>Sony WH-1000XM6</h3>
-            <p><strong>₱24,990.00</strong></p>
-            <a href="product-view1.html">View Details</a>
-        </article>
-
-        <hr>
-
-        <article>
-            <img src="2.jpeg" alt="Bose QC Ultra" width="200px">
-            <h3>Bose QuietComfort Ultra (2nd Gen)</h3>
-            <p><strong>₱26,500.00</strong></p>
-            <a href="product-view2.html">View Details</a>
-        </article>
-
-        <hr>
-
-        <article>
-            <img src="3.jpeg" alt="Sennheiser Momentum 4" width="200px">
-            <h3>Sennheiser Momentum 4</h3>
-            <p><strong>₱21,000.00</strong></p>
-            <a href="product-view3.html">View Details</a>
-        </article>
-
-        <hr>
-
-        <article>
-            <img src="4.jpeg" alt="Apple AirPods Max (USB-C / 2nd Gen)" width="200px">
-            <h3>Apple AirPods Max (USB-C / 2nd Gen)</h3>
-            <p><strong>₱32,990.00</strong></p>
-            <a href="product-view4.html">View Details</a>
-        </article>
+            <article>
+                <img src="4.jpeg" alt="Apple AirPods Max">
+                <h3>Apple AirPods Max</h3>
+                <p>High-fidelity audio for iOS.</p>
+                <p class="price">32,990.00</p>
+                <button type="button" onclick="location.href='product-view4.html'">View Details</button>
+            </article>
+        </div>
     </main>
 
     <footer>
-        <p>© 2026 Jovan's Tech. All rights reserved</p>
+        <p>© 2026 Tech Tech ni Jovan. All rights reserved</p>
     </footer>
 </body>
-
 </html>
-
