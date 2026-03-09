@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Home | Tech Tech ni Jovan</title>
-      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bluetooth.css">
 </head>
 <body>
 
     <header>
+        <h1>Tech Tech ni Jovan</h1>
         <nav>
             <ul>
                 <li><a href="landing.html">Home</a></li>
@@ -18,60 +20,70 @@
         </nav>
     </header>
 
-    <hr>
-
     <main>
-        <section>
+        <section class="hero-section">
             <h1>The New Standard of Sound</h1>
-            <p>Experience the ultimate 2026 Audio Collection. From the industry-leading noise cancellation of the <strong>Sony WH-1000XM6</strong> to the 60-hour power of the <strong>Sennheiser Momentum 4</strong>, we deliver the world's best sound straight to your doorstep.</p>
+            <p>Experience the ultimate 2026 Audio Collection. From the industry-leading noise cancellation of the <strong>Sony WH-1000XM6</strong> to the 60-hour power of the <strong>Sennheiser Momentum 4</strong>.</p>
+            <br>
             <button type="button" onclick="location.href='products.html'">Shop the Collection</button>
         </section>
 
         <hr>
 
         <section>
-            <h2>Featured Audio Gear</h2>
-            <p>Our top picks for elite performance and comfort.</p>
+            <h2 align="center">Featured Audio Gear</h2>
+            <p align="center">Our top picks for elite performance and comfort.</p>
             
-            <article>
-                <h3>Sony WH-1000XM6</h3>
-                <p>The best overall with the all-new QN3 processor and a foldable design.</p>
-                <p><strong>Price: ₱24,990.00</strong></p>
-            </article>
+            <div class="product-grid">
+                <article>
+                    <img src="1.jpeg" alt="Sony WH-1000XM6">
+                    <h3>Sony WH-1000XM6</h3>
+                    <p>The best overall with the all-new QN3 processor and a foldable design.</p>
+                    <p class="price">24,990.00</p>
+                    <button type="button" onclick="location.href='product-view1.html'">View Product</button>
+                </article>
 
-            <article>
-                <h3>Bose QuietComfort Ultra (2nd Gen)</h3>
-                <p>The undisputed king of comfort and silence for 8+ hour sessions.</p>
-                <p><strong>Price: ₱26,500.00</strong></p>
-            </article>
+                <article>
+                    <img src="2.jpeg" alt="Bose QC Ultra">
+                    <h3>Bose QC Ultra (2nd Gen)</h3>
+                    <p>The undisputed king of comfort and silence for 8+ hour sessions.</p>
+                    <p class="price">26,500.00</p>
+                    <button type="button" onclick="location.href='product-view2.html'">View Product</button>
+                </article>
+            </div>
         </section>
 
         <hr>
 
         <section>
-            <h2>Exclusive Deals</h2>
-            <p>Limited time offers on premium wireless audio.</p>
+            <h2 align="center">Exclusive Deals</h2>
+            <p align="center">Limited time offers on premium wireless audio.</p>
             
-            <article>
-                <h3>Sennheiser Momentum 4</h3>
-                <p>The battery powerhouse with audiophile sound quality.</p>
-                <p><del>₱24,000.00</del> <strong>Now: ₱21,000.00</strong></p>
-            </article>
+            <div class="product-grid">
+                <article>
+                    <img src="3.jpeg" alt="Sennheiser Momentum 4">
+                    <h3>Sennheiser Momentum 4</h3>
+                    <p>The battery powerhouse with audiophile sound quality.</p>
+                    <p><del>₱24,000.00</del> <br> <strong class="price">21,000.00</strong></p>
+                    <button type="button" onclick="location.href='product-view3.html'">Claim Deal</button>
+                </article>
 
-            <article>
-                <h3>Apple AirPods Max (USB-C)</h3>
-                <p>The premium pick for the Apple ecosystem. Natural transparency mode.</p>
-                <p><strong>Save 5% on your first order!</strong></p>
-            </article>
+                <article>
+                    <img src="4.jpeg" alt="Apple AirPods Max">
+                    <h3>Apple AirPods Max (USB-C)</h3>
+                    <p>Premium pick for the Apple ecosystem. Natural transparency mode.</p>
+                    <p class="price">32,990.00</p>
+                    <button type="button" onclick="location.href='product-view4.html'">Claim Deal</button>
+                </article>
+            </div>
         </section>
     </main>
 
     <hr>
 
     <footer>
-        <p>© 2026 Tech Tech ni Jovan All rights reserved</p>
+        <p>© 2026 Tech Tech ni Jovan All rights reserved.</p>
     </footer>
 
 </body>
-
 </html>
