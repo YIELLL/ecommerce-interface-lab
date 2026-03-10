@@ -35,6 +35,10 @@ main {
     margin-bottom: 30px;
 }
 
+.h22{
+align-items: center;
+}
+
 
 .product-grid {
     display: flex;
