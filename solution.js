@@ -10,3 +10,11 @@ const players = [
     { name: "Papong", score: 11 },
     { name: "Fergs", score: 6 }
 ];
+function getTopScorers(playerList) {
+    return playerList
+        .filter(player => player.score > 8)
+        .map(player => player.name) 
+        .join(", ");
+}
+
+console.log(getTopScorers(players));
