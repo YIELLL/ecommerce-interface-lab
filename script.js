@@ -101,3 +101,35 @@ function renderCart() {
         totalDisplay.textContent = `Total: ${total.toFixed(2)}`;
     }
 }
+
+const checkoutForm = document.querySelector('#checkout-form');
+
+checkoutForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nameInput = document.querySelector('#name');
+    const emailInput = document.querySelector('#email');
+    let isValid = true;
+
+
+    const inputs = [nameInput, emailInput];
+
+    inputs.forEach(input => {
+        if (input.value.trim() === "") {
+  
+            input.classList.add('error');
+            isValid = false;
+            console.log(Field ${input.id} is required.);
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (isValid) {
+        console.log("Form submitted successfully!");
+
+        window.location.href = 'thankyou.html';
+    } else {
+        alert("Please fill in all required fields.");
+    }
+});
