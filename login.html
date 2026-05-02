@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Tech Tech ni Jovan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Tech Tech ni Jovan</h1>
+    <nav>
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+<main align="center">
+    <h1>Login</h1>
+    <p>Log in to your account.</p>
+
+    <form action="http://localhost:8080/login" method="post">
+        <p>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required>
+        </p>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required>
+        </p>
+
+        <input type="hidden" name="_csrf" value="" id="csrfToken">
+
+        <button type="submit">Log In</button>
+    </form>
+
+    <p>Don't have an account? <a href="sign.html">Sign Up</a></p>
+</main>
+
+<hr>
+
+<script>
+    // Fetch CSRF token
+    fetch('http://localhost:8080/login')
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const csrfInput = doc.querySelector('input[name="_csrf"]');
+            if (csrfInput) {
+                document.getElementById('csrfToken').value = csrfInput.value;
+            }
+        })
+        .catch(error => console.error('Error fetching CSRF token:', error));
+</script>
+
+</body>
+</html>

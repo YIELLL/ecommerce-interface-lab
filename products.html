@@ -22,43 +22,55 @@
     <main style="text-align: center; padding: 20px;">
         <h2>2026 Headphone Collection</h2>
         
-        <div class="product-grid">
-            <article>
-                <img src="1.jpeg" alt="Sony WH-1000XM6">
-                <h3>Sony WH-1000XM6</h3>
-                <p>Industry-leading noise cancellation.</p>
-                <p class="price">24,990.00</p>
-                <button type="button" onclick="location.href='product-view1.html'">View Details</button>
-            </article>
-
-            <article>
-                <img src="2.jpeg" alt="Bose QC Ultra">
-                <h3>Bose QC Ultra</h3>
-                <p>The ultimate in long-wear comfort.</p>
-                <p class="price">26,500.00</p>
-                <button type="button" onclick="location.href='product-view2.html'">View Details</button>
-            </article>
-
-            <article>
-                <img src="3.jpeg" alt="Sennheiser Momentum 4">
-                <h3>Sennheiser Momentum 4</h3>
-                <p>60-hour battery life powerhouse.</p>
-                <p class="price">21,000.00</p>
-                <button type="button" onclick="location.href='product-view3.html'">View Details</button>
-            </article>
-
-            <article>
-                <img src="4.jpeg" alt="Apple AirPods Max">
-                <h3>Apple AirPods Max</h3>
-                <p>High-fidelity audio for iOS.</p>
-                <p class="price">32,990.00</p>
-                <button type="button" onclick="location.href='product-view4.html'">View Details</button>
-            </article>
+        <div id="product-grid" class="product-grid">
+            <!-- Products will be loaded here -->
         </div>
     </main>
 
     <footer>
         <p>© 2026 Tech Tech ni Jovan. All rights reserved</p>
     </footer>
+
+    <script>
+        async function fetchProducts() {
+            try {
+                const response = await fetch('http://localhost:8080/api/v1/products');
+                if (response.ok) {
+                    const products = await response.json();
+                    displayProducts(products);
+                } else if (response.status === 401) {
+                    alert('Please log in to view products.');
+                    window.location.href = 'login.html';
+                } else {
+                    alert('Failed to load products.');
+                }
+            } catch (error) {
+                console.error('Error fetching products:', error);
+                alert('Error loading products.');
+            }
+        }
+
+        function displayProducts(products) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+            products.forEach(product => {
+                const article = document.createElement('article');
+                article.innerHTML = `
+                    <img src="${product.imageUrl || 'placeholder.jpg'}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p class="price">${product.price}</p>
+                    <button type="button" onclick="viewProduct(${product.id})">View Details</button>
+                `;
+                grid.appendChild(article);
+            });
+        }
+
+        function viewProduct(id) {
+            window.location.href = `product-view.html?id=${id}`;
+        }
+
+        fetchProducts();
+    </script>
 </body>
 </html>
